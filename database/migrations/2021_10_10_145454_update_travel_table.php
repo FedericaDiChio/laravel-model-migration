@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTravelsTable extends Migration
+class UpdateTravelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateTravelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('travels', function (Blueprint $table) {
-            $table->id();
-            $table->string('destination');
-            $table->float('price', 5,2)->unsigned();
-            $table->text('description');
-            $table->timestamps();
+        Schema::table('travels', function (Blueprint $table) {
+            //
         });
     }
 
@@ -29,6 +25,8 @@ class CreateTravelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('travels');
+        Schema::table('travels', function (Blueprint $table) {
+            //
+        });
     }
 }
