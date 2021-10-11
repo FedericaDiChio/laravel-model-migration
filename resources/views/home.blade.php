@@ -11,7 +11,8 @@
     <div>
         @foreach ($travels as $travel)
             <p>Destinazione: {{$travel->destination}}</p>
-            <p>Prezzo: € {{ $travel->price }}</p>    
+            <p>Prezzo: € {{ $travel->price }}</p>
+            <hr>    
         @endforeach    
     </div>
     
